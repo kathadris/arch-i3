@@ -1,0 +1,103 @@
+/* Generated from theme.palette */
+* {
+    bg0:            __BG0__;
+    bg1:            __BG1__;
+    bg2:            __BG2__;
+    bg3:            __BG3__;
+
+    fg0:            __FG0__;
+    fg1:            __FG1__;
+    fg2:            __FG2__;
+
+    accent:         __ACCENT__;
+    accent-alt:     __ACCENT_ALT__;
+    border:         __BORDER__;
+    selected:       __SELECTED__;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+    font:               "__FONT_MAIN__ 12";
+}
+
+configuration {
+    modi:                       "run";
+    show-icons:                 false;
+}
+
+window {
+    width:                      __ROFI_POWER_WIDTH__;
+    height:                     __ROFI_POWER_HEIGHT__;
+    location:                   center;
+    anchor:                     center;
+    fullscreen:                 false;
+    transparency:               "real";
+    background-color:           rgba(5, 7, 12, 0.92);
+    border:                     2px;
+    border-color:               @border;
+    border-radius:              14px;
+    padding:                    18px;
+}
+
+mainbox {
+    spacing:                    14px;
+    children:                   [ "inputbar", "listview" ];
+    background-color:           transparent;
+}
+
+inputbar {
+    padding:                    10px 12px;
+    border:                     1px;
+    border-radius:              10px;
+    border-color:               @border;
+    background-color:           rgba(19, 27, 42, 0.95);
+    children:                   [ "prompt" ];
+}
+
+prompt {
+    enabled:                    true;
+    str:                        "  Power";
+    text-color:                 @accent-alt;
+    background-color:           transparent;
+}
+
+entry {
+    enabled:                    false;
+}
+
+listview {
+    lines:                      2;
+    columns:                    3;
+    spacing:                    10px;
+    cycle:                      false;
+    dynamic:                    false;
+    scrollbar:                  false;
+    layout:                     vertical;
+    background-color:           transparent;
+}
+
+element {
+    padding:                    16px 10px;
+    border:                     1px;
+    border-radius:              12px;
+    border-color:               @border;
+    background-color:           rgba(11, 17, 32, 0.95);
+    text-color:                 @fg1;
+    orientation:                vertical;
+}
+
+element selected.normal {
+    background-color:           rgba(22, 34, 53, 0.98);
+    border-color:               @accent;
+    text-color:                 @fg0;
+}
+
+element-icon {
+    enabled:                    false;
+}
+
+element-text {
+    horizontal-align:           0.5;
+    vertical-align:             0.5;
+    text-color:                 inherit;
+    background-color:           transparent;
+}

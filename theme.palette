@@ -1,0 +1,31 @@
+# Midnight theme palette
+# Edit these values, then rerun ./install.sh or ~/.config/midnight-theme/apply-theme.sh
+
+FONT_MAIN="JetBrainsMono Nerd Font"
+FONT_SIZE_ROFI="11"
+FONT_SIZE_POLYBAR="11"
+
+BG0="#05070c"
+BG1="#0b1120"
+BG2="#131b2a"
+BG3="#1b2637"
+
+FG0="#d7deea"
+FG1="#aeb8c9"
+FG2="#7d899b"
+
+ACCENT="#8d2a48"
+ACCENT_ALT="#b64563"
+SECONDARY="#7aa2c8"
+URGENT="#c84f6f"
+BORDER="#243247"
+SELECTED="#162235"
+ACTIVE="#1d2f46"
+
+ROFI_DRUN_WIDTH="450px"
+ROFI_DRUN_HEIGHT="500px"
+ROFI_POWER_WIDTH="450px"
+ROFI_POWER_HEIGHT="260px"
+
+POLYBAR_HEIGHT="28pt"
+POLYBAR_RADIUS="10"

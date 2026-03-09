@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+theme="$HOME/.config/rofi/themes/midnight-power.rasi"
+options=" Lock\n Logout\n Suspend\n Reboot\n Shutdown\n Hibernate"
+chosen="$(printf "$options" | rofi -dmenu -i -p "" -theme "$theme")"
+
+case "$chosen" in
+    " Lock")
+        i3lock
+        ;;
+    " Logout")
+        pkill -KILL -u "$USER"
+        ;;
+    " Suspend")
+        systemctl suspend
+        ;;
+    " Reboot")
+        systemctl reboot
+        ;;
+    " Shutdown")
+        systemctl poweroff
+        ;;
+    " Hibernate")
+        systemctl hibernate
+        ;;
+esac

@@ -1,0 +1,146 @@
+/* Generated from theme.palette */
+* {
+    bg0:            __BG0__;
+    bg1:            __BG1__;
+    bg2:            __BG2__;
+    bg3:            __BG3__;
+
+    fg0:            __FG0__;
+    fg1:            __FG1__;
+    fg2:            __FG2__;
+
+    accent:         __ACCENT__;
+    accent-alt:     __ACCENT_ALT__;
+    urgent:         __URGENT__;
+
+    border:         __BORDER__;
+    selected:       __SELECTED__;
+    active:         __ACTIVE__;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+    font:               "__FONT_MAIN__ __FONT_SIZE_ROFI__";
+}
+
+configuration {
+    modi:                       "drun";
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+    disable-history:            false;
+    hover-select:               true;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+}
+
+window {
+    width:                      __ROFI_DRUN_WIDTH__;
+    height:                     __ROFI_DRUN_HEIGHT__;
+    location:                   center;
+    anchor:                     center;
+    fullscreen:                 false;
+    transparency:               "real";
+    background-color:           rgba(5, 7, 12, 0.90);
+    border:                     2px;
+    border-color:               @border;
+    border-radius:              14px;
+    padding:                    18px;
+}
+
+mainbox {
+    spacing:                    12px;
+    children:                   [ "inputbar", "message", "listview" ];
+    background-color:           transparent;
+}
+
+inputbar {
+    spacing:                    10px;
+    padding:                    10px 12px;
+    border:                     1px;
+    border-radius:              10px;
+    border-color:               @border;
+    background-color:           rgba(19, 27, 42, 0.95);
+    children:                   [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                    true;
+    text-color:                 @accent-alt;
+    background-color:           transparent;
+    str:                        "";
+}
+
+entry {
+    placeholder:                "Search apps";
+    placeholder-color:          @fg2;
+    text-color:                 @fg0;
+    background-color:           transparent;
+}
+
+message {
+    enabled:                    false;
+}
+
+listview {
+    lines:                      8;
+    columns:                    1;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  true;
+    layout:                     vertical;
+    spacing:                    8px;
+    background-color:           transparent;
+    padding:                    4px 0px 0px;
+}
+
+scrollbar {
+    width:                      4px;
+    border:                     0;
+    handle-width:               8px;
+    handle-color:               @accent;
+    background-color:           rgba(36, 50, 71, 0.35);
+}
+
+element {
+    padding:                    10px;
+    border:                     1px;
+    border-radius:              10px;
+    border-color:               transparent;
+    background-color:           transparent;
+    text-color:                 @fg0;
+}
+
+element normal.normal {
+    background-color:           transparent;
+    text-color:                 @fg1;
+}
+
+element selected.normal {
+    background-color:           rgba(22, 34, 53, 0.95);
+    border-color:               @accent;
+    text-color:                 @fg0;
+}
+
+element selected.active {
+    background-color:           rgba(29, 47, 70, 0.95);
+    border-color:               @accent-alt;
+    text-color:                 @fg0;
+}
+
+element selected.urgent {
+    background-color:           rgba(141, 42, 72, 0.22);
+    border-color:               @urgent;
+    text-color:                 @fg0;
+}
+
+element-icon {
+    size:                       24px;
+    border:                     0;
+    background-color:           transparent;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 inherit;
+    vertical-align:             0.5;
+    margin:                     0px 0px 0px 6px;
+}
